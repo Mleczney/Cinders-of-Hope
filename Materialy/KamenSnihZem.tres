@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://rmd2x0gc06mj"]
+
+[ext_resource type="Texture2D" uid="uid://ol833gdcfxre" path="res://Textury/ZemeTextury/snow_field_aerial_col_4k.png" id="1_hs8m5"]
+[ext_resource type="Texture2D" uid="uid://yrbprjnp2bdu" path="res://Textury/ZemeTextury/snow_field_aerial_nor_gl_4k.png" id="2_p4eah"]
+[ext_resource type="Texture2D" uid="uid://ciwogxmn5t1qo" path="res://Textury/ZemeTextury/snow_field_aerial_rough_4k.png" id="3_5ci7j"]
+
+[resource]
+albedo_texture = ExtResource("1_hs8m5")
+roughness_texture = ExtResource("3_5ci7j")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_texture = ExtResource("2_p4eah")
+uv1_scale = Vector3(15.145, 15.145, 15.145)

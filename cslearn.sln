@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cslearn", "cslearn.csproj", "{DBFD87F6-AAA9-4661-B5BE-3909683C8866}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBFD87F6-AAA9-4661-B5BE-3909683C8866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBFD87F6-AAA9-4661-B5BE-3909683C8866}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBFD87F6-AAA9-4661-B5BE-3909683C8866}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{DBFD87F6-AAA9-4661-B5BE-3909683C8866}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{DBFD87F6-AAA9-4661-B5BE-3909683C8866}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{DBFD87F6-AAA9-4661-B5BE-3909683C8866}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

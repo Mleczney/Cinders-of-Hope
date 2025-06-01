@@ -1,0 +1,20 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=8 format=3 uid="uid://d10xgc8637mt5"]
+
+[ext_resource type="AudioStream" uid="uid://cnoxy21e4i1ux" path="res://Sounds/StepSounds/HardSnow/Footsteps_Iceland_Walk_Snow_Hard_Mono_04.wav" id="1_iyvgj"]
+[ext_resource type="AudioStream" uid="uid://dhy4r2y3naxtn" path="res://Sounds/StepSounds/HardSnow/Footsteps_Iceland_Walk_Snow_Hard_Mono_05.wav" id="2_5kcqm"]
+[ext_resource type="AudioStream" uid="uid://d1qrpmvcwgld2" path="res://Sounds/StepSounds/HardSnow/Footsteps_Iceland_Walk_Snow_Hard_Mono_06.wav" id="3_r68on"]
+[ext_resource type="AudioStream" uid="uid://4op77cv1bh11" path="res://Sounds/StepSounds/HardSnow/Footsteps_Iceland_Walk_Snow_Hard_Mono_07.wav" id="4_blhho"]
+[ext_resource type="AudioStream" uid="uid://bh0vpm8bjt7gv" path="res://Sounds/StepSounds/HardSnow/Footsteps_Iceland_Walk_Snow_Hard_Mono_08.wav" id="5_oqs8w"]
+[ext_resource type="AudioStream" uid="uid://thv3vasjq25r" path="res://Sounds/StepSounds/HardSnow/Footsteps_Iceland_Walk_Snow_Hard_Mono_09.wav" id="6_oev35"]
+[ext_resource type="AudioStream" uid="uid://bmby2eovadnfn" path="res://Sounds/StepSounds/HardSnow/Footsteps_Iceland_Walk_Snow_Hard_Mono_10.wav" id="7_xjild"]
+
+[resource]
+playback_mode = 1
+streams_count = 7
+stream_0/stream = ExtResource("1_iyvgj")
+stream_1/stream = ExtResource("2_5kcqm")
+stream_2/stream = ExtResource("3_r68on")
+stream_3/stream = ExtResource("4_blhho")
+stream_4/stream = ExtResource("5_oqs8w")
+stream_5/stream = ExtResource("6_oev35")
+stream_6/stream = ExtResource("7_xjild")

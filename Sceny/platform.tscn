@@ -1,0 +1,86 @@
+[gd_scene load_steps=14 format=3 uid="uid://dsfy3lv0yjg4f"]
+
+[ext_resource type="Script" uid="uid://1jhkry33wgkq" path="res://Kody/Platform.cs" id="1_c1gtx"]
+[ext_resource type="PackedScene" uid="uid://ddww6p2dwbss4" path="res://Sceny/player.tscn" id="1_mi635"]
+[ext_resource type="Material" uid="uid://rmd2x0gc06mj" path="res://Materialy/KamenSnihZem.tres" id="2_ph1ng"]
+[ext_resource type="Texture2D" uid="uid://r2l3e2app8c5" path="res://Materialy/HDR/snow_field_2_4k.hdr" id="4_7u0im"]
+[ext_resource type="PackedScene" uid="uid://b4e4ufo388cnj" path="res://Sceny/enemy.tscn" id="4_ry5bi"]
+[ext_resource type="AudioStream" uid="uid://dfnia4ks5dvp1" path="res://Sounds/AmbientSounds/Winter Storm.wav" id="6_7u0im"]
+[ext_resource type="Material" uid="uid://oo31yn1rc4tr" path="res://Materialy/Pocasi/personal_realish_rain_particle_process_material.tres" id="7_ardar"]
+[ext_resource type="Material" uid="uid://hrte3atgt8m7" path="res://Materialy/Pocasi/snowflake.tres" id="8_xucfa"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_ry5bi"]
+vertices = PackedVector3Array(-99.5, 0.454, -99.5, -99.5, 0.454, 99.5, 99.5, 0.454, 99.5, 99.5, 0.454, -99.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ry5bi"]
+panorama = ExtResource("4_7u0im")
+energy_multiplier = 0.5
+
+[sub_resource type="Sky" id="Sky_ph1ng"]
+sky_material = SubResource("PanoramaSkyMaterial_ry5bi")
+
+[sub_resource type="Environment" id="Environment_7u0im"]
+background_mode = 2
+sky = SubResource("Sky_ph1ng")
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.2
+volumetric_fog_emission = Color(0.505344, 0.505344, 0.505344, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_nncj0"]
+material = ExtResource("8_xucfa")
+size = Vector2(0.5, 0.5)
+subdivide_width = 2
+subdivide_depth = 2
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_c1gtx")
+
+[node name="AttackText" type="Label" parent="."]
+offset_right = 180.0
+offset_bottom = 47.0
+text = "Attacking?"
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.67178, -0.454102, -9.11224)
+navigation_mesh = SubResource("NavigationMesh_ry5bi")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D"]
+material_override = ExtResource("2_ph1ng")
+use_collision = true
+size = Vector3(200, 0.092, 200)
+
+[node name="Player" parent="." instance=ExtResource("1_mi635")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.73952, 0)
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 339.0
+offset_top = 424.0
+offset_right = 857.0
+offset_bottom = 526.0
+theme_override_font_sizes/font_size = 121
+text = "EXIT"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7u0im")
+
+[node name="Enemy" parent="." instance=ExtResource("4_ry5bi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -11)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_7u0im")
+volume_db = -6.0
+autoplay = true
+
+[node name="Rain_Realish2" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 0)
+amount = 5000
+preprocess = 1.0
+randomness = 0.85
+visibility_aabb = AABB(-100, -10, -100, 200, 20, 200)
+trail_lifetime = 0.1
+process_material = ExtResource("7_ardar")
+draw_pass_1 = SubResource("QuadMesh_nncj0")
+
+[connection signal="button_down" from="Exit" to="." method="OnButtonDown"]
+[connection signal="button_down" from="Exit" to="." method="_on_button_button_down"]

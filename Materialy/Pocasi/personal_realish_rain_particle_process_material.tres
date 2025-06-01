@@ -1,0 +1,18 @@
+[gd_resource type="ParticleProcessMaterial" format=3 uid="uid://oo31yn1rc4tr"]
+
+[resource]
+emission_shape_scale = Vector3(100, 1, 100)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(1, -5, 0)
+spread = 5.0
+initial_velocity_min = 10.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, -5, 0)
+scale_min = 0.1
+color = Color(1, 1, 1, 0.352941)
+hue_variation_min = -0.01
+hue_variation_max = 0.01
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.0
