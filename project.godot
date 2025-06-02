@@ -24,7 +24,7 @@ project/assembly_name="cslearn"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/fancy_folder_colors/plugin.cfg", "res://addons/fancy_folder_icons/plugin.cfg")
+enabled=PackedStringArray("res://addons/fancy_folder_colors/plugin.cfg")
 
 [global_group]
 
