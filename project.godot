@@ -14,10 +14,6 @@ config/name="cslearn"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
-
-DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-
 [dialogue_manager]
 
 runtime/advanced/uses_dotnet=true
@@ -28,7 +24,7 @@ project/assembly_name="cslearn"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/blenderCam/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/fancy_folder_colors/plugin.cfg", "res://addons/fancy_folder_icons/plugin.cfg")
+enabled=PackedStringArray("res://addons/fancy_folder_colors/plugin.cfg", "res://addons/fancy_folder_icons/plugin.cfg")
 
 [global_group]
 
