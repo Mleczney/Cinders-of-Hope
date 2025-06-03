@@ -16,4 +16,4 @@ The game combines survival mechanics with emotional storytelling, focusing on th
 ## License
 
 This project is protected by a custom license.  
-See [LICENSE.txt](LICENSE.txt) for details.
+See [LICENSE](LICENSE) for details.
