@@ -66,6 +66,7 @@ environment = SubResource("Environment_7u0im")
 
 [node name="Enemy" parent="." instance=ExtResource("4_ry5bi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -11)
+visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_7u0im")
@@ -82,5 +83,5 @@ trail_lifetime = 0.1
 process_material = ExtResource("7_ardar")
 draw_pass_1 = SubResource("QuadMesh_nncj0")
 
-[connection signal="button_down" from="Exit" to="." method="OnButtonDown"]
 [connection signal="button_down" from="Exit" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Exit" to="." method="OnButtonDown"]

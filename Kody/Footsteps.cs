@@ -14,8 +14,8 @@ public partial class Footsteps : Node3D
 	// POZOR: Godot neumí exportovat Dictionary do editoru, ale v kódu to funguje!
 	public Dictionary<string, AudioStream> SoundMapping = new()
 	{
-		{ "SnehKroky", GD.Load<AudioStream>("res://SnehKroky.tres") },
-		{ "Default", GD.Load<AudioStream>("res://SnehKroky.tres") } // přidej další pokud chceš
+		{ "SnehKroky", GD.Load<AudioStream>("res://Sounds/SbirkaZvuku/SnehKroky.tres") },
+		{ "Default", GD.Load<AudioStream>("res://Sounds/SbirkaZvuku/SnehKroky.tres") } // přidej další pokud chceš
 	};
 
 	[Export] public float PitchMin = 0.95f;
